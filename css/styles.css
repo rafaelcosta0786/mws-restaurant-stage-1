@@ -187,8 +187,8 @@ nav h1 a {
   text-transform: uppercase;
 }
 #restaurants-list p {
-  margin: 0;
-  font-size: 11pt;
+  margin: 20px 0;
+  font-size: 8pt;
 }
 #restaurants-list li a {
   position: absolute;
@@ -201,7 +201,6 @@ nav h1 a {
   display: inline-block;
   font-size: 14px;
   margin: 15px 0 0;
-  padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
