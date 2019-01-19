@@ -44,7 +44,7 @@ self.addEventListener('activate', function (event) {
 
 self.addEventListener('fetch',
     function (event) {
-        event.respondWith
+            event.respondWith
             (
                 caches.match(event.request)
                     .then
@@ -58,7 +58,7 @@ self.addEventListener('fetch',
                                     (
                                         function (response) {
                                             let responseClone = response.clone();
-                                            caches.open(cacheName)
+                                            caches.open(staticCacheName)
                                                 .then(
                                                     function (cache) {
                                                         cache.put(event.request, responseClone);
