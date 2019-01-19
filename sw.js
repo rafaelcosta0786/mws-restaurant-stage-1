@@ -1,17 +1,28 @@
 // Cache Definition
-let cacheName = 'mws-restaurant-rcosta-';
-const randomId = Math.floor(Math.random() * 30000);
-cacheName += randomId;
+let staticCacheName = 'mws-restaurant-rcosta-v1';
 
 self.addEventListener("install", function (event) {
     event.waitUntil(
-        caches.open(cacheName).then(function (cache) {
+        caches.open(staticCacheName).then(function (cache) {
             return cache.addAll([
                 'index.html',
                 'restaurant.html',
-                '/css/',
-                '/js/',
-                '/img/',
+                '/css/device.css',
+                '/css/styles.css',
+                '/js/dbhelper.js',
+                '/js/main.js',
+                '/js/register.js',
+                '/js/restaurant_info.js',
+                '/img/1.jpg',
+                '/img/2.jpg',
+                '/img/3.jpg',
+                '/img/4.jpg',
+                '/img/5.jpg',
+                '/img/6.jpg',
+                '/img/7.jpg',
+                '/img/8.jpg',
+                '/img/9.jpg',
+                '/img/10.jpg',
             ]);
         }));
 });
@@ -22,7 +33,7 @@ self.addEventListener('activate', function (event) {
             return Promise.all(
                 cacheNames.filter(function (cacheName) {
                     return cacheName.startsWith('mws-restaurant-rcosta-') &&
-                        cacheName != cacheName;
+                        cacheName != staticCacheName;
                 }).map(function (cacheName) {
                     return caches.delete(cacheName);
                 })
