@@ -76,7 +76,7 @@
 	}
 
 	.filter-options select {
-		display: none;
+		display: inline;
 		width: 96%;
 		margin: 1% 2%;
 		padding: 0 2%;
